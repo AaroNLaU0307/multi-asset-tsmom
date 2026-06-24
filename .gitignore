@@ -11,15 +11,25 @@ __pycache__/
 .mypy_cache/
 .ipynb_checkpoints/
 
-# --- Market data: NEVER commit (yfinance pulls Yahoo data; licensing) ---
-data/
+# --- Market data: NEVER commit raw caches (yfinance / Yahoo licensing) ---
+# EXCEPTION: the Phase-2 XSMOM universe price snapshot is committed as a read-only
+# reproducibility record (see data/README_DATA_SNAPSHOT.md). Everything else under
+# data/ — including the engine's close_prices_raw.csv — stays ignored.
+data/*
+!data/xsmom_universes_prices.csv
+!data/README_DATA_SNAPSHOT.md
 data_cache/
 *.parquet
 
 # --- Generated analysis artifacts (re-creatable via the pipeline) ---
-# The whole output/ folder is regenerable and git-ignored. The key figures the
-# README/STUDY_SUMMARY reference are copied into assets/ (which IS tracked).
-output/
+# output/ is regenerable and git-ignored, EXCEPT the few artifacts the committed XSMOM
+# READMEs link to (the two hero figures + the two full reports), tracked so those READMEs
+# render on GitHub. TSMOM figures live in assets/ (also tracked).
+output/*
+!output/xsmom_equity_curves.png
+!output/xsmom_universes_map.png
+!output/XSMOM_REPORT.md
+!output/XSMOM_UNIVERSES_REPORT.md
 
 # --- OS / editor ---
 .DS_Store

@@ -6,6 +6,28 @@ momentum (TSMOM) strategy — built to *test* an edge honestly, not to sell one.
 (signal → volatility scaling → portfolio → risk control → validation); three control
 experiments; strict no-look-ahead discipline with a unit-test suite.
 
+## This repository is one momentum research line, in three stages
+
+1. **TSMOM — *confirmed*.** Time-series momentum on 17 ETFs: a small but real edge — net
+   Sharpe ≈ **0.75**, 95% bootstrap CI **[0.29, 1.23]** (excludes 0), with genuine crisis
+   alpha. → **this README**, below.
+2. **XSMOM on the same 17-ETF mixed universe — *falsified*.** Cross-sectional momentum:
+   Sharpe ≈ **0.28**, CI **[−0.18, 0.75]** crosses 0; **+0.42** correlation with TSMOM exposes
+   the shared autocorrelation term, so a vol-aligned 50/50 combo *dilutes* rather than
+   diversifies. → [`XSMOM_README.md`](XSMOM_README.md).
+3. **XSMOM across 5 pre-registered universes — *falsified, with mechanism*.** US sectors /
+   country indices / G10 FX / commodities / bonds (negative control): **0 / 5** survive
+   BH-FDR; the cross-sectional lead-lag term XSMOM uniquely needs is **not shown to be
+   non-trivial** in any universe (every block-bootstrap CI contains 0); the bond negative
+   control behaves exactly as the framework predicted. → [`XSMOM_UNIVERSES_README.md`](XSMOM_UNIVERSES_README.md).
+
+*Methodology throughout:* pre-registered falsification criteria, strict no-look-ahead control
+(truncation-invariance tests), bootstrap CIs, walk-forward OOS, BH-FDR multiple-comparison
+correction, and a Lo–MacKinlay profit decomposition. **Negative results are reported with
+equal prominence to positive ones.**
+
+---
+
 ## TL;DR
 
 **What I built**
