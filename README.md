@@ -1,3 +1,12 @@
+> **⚠️ This project has moved.** The full, consolidated research — the confirmed TSMOM core,
+> the cross-sectional momentum (XSMOM) study, and four additional falsified overlays — now lives
+> in a single up-to-date repository:
+> **→ [multi-asset-tsmom-research](https://github.com/AaroNLaU0307/multi-asset-tsmom-research)**
+>
+> This repo is kept as an archived earlier snapshot. See the link above for the current work.
+
+---
+
 # Multi-Asset Time-Series Momentum — a falsification-oriented research study
 
 **An institutional-style, end-to-end research study of a multi-asset time-series
